@@ -37,6 +37,8 @@ services:
     depends_on:
       - mariadb
     environment:
+      - MARIADB_HOST=mariadb
+      - MARIADB_PORT_NUMBER=3306
       - VIRTUAL_HOST=${URL}
       - LETSENCRYPT_HOST=${URL}
       - LETSENCRYPT_EMAIL=${GHOST_EMAIL}
