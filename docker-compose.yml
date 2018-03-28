@@ -53,6 +53,14 @@ services:
 
 volumes:
   mariadb_data:
-    driver: local
+    driver_opts:
+      type: none
+      device: /mnt/data
+      o: bind
+    #driver: local
   ghost_data:
-    driver: local
+    driver_opts:
+      type: none
+      device: /mnt/data
+      o: bind
+    #driver: local
